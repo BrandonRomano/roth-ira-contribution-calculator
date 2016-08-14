@@ -10,12 +10,6 @@ new Vue({
   },
   methods: {
     calculate: function (event) {
-      // Checking to see if they are too old
-      if (this.age >= 70.5) {
-        this.result = 0
-        return
-      }
-
       // Getting base limit
       var base_limit = 5500
       if (this.age >= 50) {
