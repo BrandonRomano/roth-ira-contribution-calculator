@@ -2,6 +2,10 @@
 
 A calculator that helps you figure out how much you can contribute to your Roth IRA.
 
+## Check It Out
+
+http://roth-ira-contribution-calculator.netlify.com/
+
 ## Setup
 
 - make sure [node.js](http://nodejs.org) is at version >= `6`
