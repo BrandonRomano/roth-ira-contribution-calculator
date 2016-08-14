@@ -31,7 +31,12 @@ block content
     h4 2016 Modified Adjusted Gross Income
       sup [1][3]*
 
-    input(v-model="income" type="number")
+    input(v-model="magi" type="number")
+
+    h4 2016 Taxable Compensation
+      sup [2][5]+
+
+    input(v-model="taxable_compensation" type="number")
 
     h4 Age
       sup [2][4]
@@ -55,8 +60,11 @@ block content
     a(href="https://www.irs.gov/businesses/small-businesses-self-employed/passive-activity-loss-atg-exhibit-2-2-modified-adjusted-gross-income-computation") Passive Activity Loss ATG - Exhibit 2.2: Modified Adjusted Gross Income Computation
   p [4] IRS (7-Dec-2015).
     a(href="https://www.irs.gov/retirement-plans/roth-iras") Roth IRAs
+  p [5] IRS (2015).
+    a(href="https://www.irs.gov/pub/irs-pdf/f1040.pdf") Form 1040
 
   h2 Editors Notes
   p * This is effectively the amount of money that you've made, but you can't subtract losses/expenses that are usually considered write-offs.
+  p + Very frequently, this is the same value as your Modified Adjusted Gross Income.  You can figure out this value by completing your 1040 form.  This value is the value on line 43.
 
   a(href="https://github.com/BrandonRomano/roth-ira-contribution-calculator") Check out the source code here
