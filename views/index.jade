@@ -1,0 +1,58 @@
+extends layout
+
+block content
+
+  h1 2016 Roth IRA Contribution Calculator
+
+  #roth-calculator
+    h4 Marital Status
+      sup [1]
+
+    .option
+      input(type="radio" name="filing_status" v-model="filing_status" id="single" value="single")
+      label(for="single") Single, Head of Household
+
+    .option
+      input(type="radio" name="filing_status" v-model="filing_status" id="widow" value="widow")
+      label(for="widow") Qualifying Widow(er)
+
+    .option
+      input(type="radio" name="filing_status" v-model="filing_status" id="jointly" value="jointly")
+      label(for="jointly") Married and Filing Jointly
+
+    .option
+      input(type="radio" name="filing_status" v-model="filing_status" id="mfs-lived-with" value="mfs-lived-with")
+      label(for="mfs-lived-with") Married Filing Separately (and you lived with your spouse at any time during the year)
+
+    .option
+      input(type="radio" name="filing_status" v-model="filing_status" id="mfs-lived-without" value="mfs-lived-without")
+      label(for="mfs-lived-without") Married Filing Separately (and you did not live with your spouse at any time during the year)
+
+    h4 2016 Modified Adjusted Gross Income
+      sup [1][3]*
+
+    input(v-model="income" type="number")
+
+    h4 Age
+      sup [2]
+
+    input(v-model="age" type="number")
+
+    h4 Result
+
+    button(v-on:click="calculate") Calculate
+
+    p Maximum Contribution:
+      span.result  {{ result | currency }}
+
+  h2 Sources
+
+  p [1] IRS (23-Dec-2015).
+    a(href="https://www.irs.gov/retirement-plans/plan-participant-employee/amount-of-roth-ira-contributions-that-you-can-make-for-2016") "Amount of Roth IRA Contributions That You Can Make for 2016"
+  p [2] IRS (23-Dec-2015).
+    a(href="https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits") "Retirement Topics - IRA Contribution Limits"
+  p [3] IRS (09-Jun-2016).
+    a(href="https://www.irs.gov/businesses/small-businesses-self-employed/passive-activity-loss-atg-exhibit-2-2-modified-adjusted-gross-income-computation") Passive Activity Loss ATG - Exhibit 2.2: Modified Adjusted Gross Income Computation
+
+  h2 Editors Notes
+  p * This is effectively the amount of money that you've made, but you can't subtract losses/expenses that are usually considered write-offs.
