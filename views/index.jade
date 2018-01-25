@@ -2,7 +2,7 @@ extends layout
 
 block content
 
-  h1 2016 Roth IRA Contribution Calculator
+  h1 2017 Roth IRA Contribution Calculator
 
   #roth-calculator
     h4 Marital Status
@@ -28,12 +28,12 @@ block content
       input(type="radio" name="filing_status" v-model="filing_status" id="mfs-lived-without" value="mfs-lived-without")
       label(for="mfs-lived-without") Married Filing Separately (and you did not live with your spouse at any time during the year)
 
-    h4 2016 Modified Adjusted Gross Income
+    h4 2017 Modified Adjusted Gross Income
       sup [1][3]*
 
     input(v-model="magi" type="number")
 
-    h4 2016 Taxable Compensation
+    h4 2017 Taxable Compensation
       sup [2][5]+
 
     input(v-model="taxable_compensation" type="number")
@@ -52,15 +52,15 @@ block content
 
   h2 Sources
 
-  p [1] IRS (23-Dec-2015).
-    a(href="https://www.irs.gov/retirement-plans/plan-participant-employee/amount-of-roth-ira-contributions-that-you-can-make-for-2016") "Amount of Roth IRA Contributions That You Can Make for 2016"
-  p [2] IRS (23-Dec-2015).
+  p [1] IRS (16-Oct-2017).
+    a(href="https://www.irs.gov/retirement-plans/amount-of-roth-ira-contributions-that-you-can-make-for-2017") "Amount of Roth IRA Contributions That You Can Make for 2017"
+  p [2] IRS (20-Oct-2017).
     a(href="https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits") "Retirement Topics - IRA Contribution Limits"
-  p [3] IRS (09-Jun-2016).
-    a(href="https://www.irs.gov/businesses/small-businesses-self-employed/passive-activity-loss-atg-exhibit-2-2-modified-adjusted-gross-income-computation") Passive Activity Loss ATG - Exhibit 2.2: Modified Adjusted Gross Income Computation
-  p [4] IRS (7-Dec-2015).
+  p [3] IRS (31-Jul-2012).
+    a(href="https://www.irs.gov/pub/irs-mssp/pal.pdf") Passive Activity Loss ATG - Exhibit 2.2: Modified Adjusted Gross Income Computation
+  p [4] IRS (20-Oct-2017).
     a(href="https://www.irs.gov/retirement-plans/roth-iras") Roth IRAs
-  p [5] IRS (2015).
+  p [5] IRS (2017).
     a(href="https://www.irs.gov/pub/irs-pdf/f1040.pdf") Form 1040
 
   h2 Editors Notes
